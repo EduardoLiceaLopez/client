@@ -1,0 +1,49 @@
+<ion-content>
+  <div class="contenedor__todo">
+
+    <!--CAJA AZUL DE ATRÁS-->
+                <div class="caja__trasera">
+    
+                    <div class="caja__trasera-login" id="caja__trasera-login">
+                        <h3>¿Ya estas registrado?</h3>
+                        <p>Inicia Sesión para entrar en la página</p>
+                        <button id="btn__iniciar-sesion" (click)="iniciarSesion()">Iniciar Sesión</button>
+                    </div>
+                    <div class="caja__trasera-register" id="caja__trasera-register">
+                        <h3>¿Aún no te registras?</h3>
+                        <p>Regístrate para poder iniciar sesión</p>
+                        <button id="btn__registrarse" (click)="register()">Registrarme</button>
+                    </div>
+    
+                </div>
+    
+    <!--Formulario de login y registro-->
+                <div class="contenedor__login-register" id="contenedor__login-register">
+                    <!--Login-->
+                    <form action="" class="formulario__login" id="formulario__login">
+    
+                        <h2>Iniciar sesión</h2>
+                        <input type="text" placeholder="Correo Electrónico" name="email_access" [(ngModel)]="userData.correo">
+                        <input type="password" placeholder="Contraseña" name="password_access" [(ngModel)]="userData.contrasenia">                        
+                        <button (click)="onLoginClick()">Entrar</button>
+    
+                    </form>
+                    <!--Registro-->
+                    <form action="" class="formulario__register" id="formulario__register">
+    
+                        <h2>Registrarse</h2>
+                        <input type="text" placeholder="Nombre" name="nombre" [(ngModel)]="userData.nombre">
+                        <input type="text" placeholder="Apellido Paterno" name="apPaterno" [(ngModel)]="userData.apPaterno">
+                        <input type="text" placeholder="Apellido Materno" name="apMaterno" [(ngModel)]="userData.apMaterno">
+                        <input type="date" placeholder="Fecha de nacimiento" name="fech_nacimiento" [(ngModel)]="userData.fech_nacimiento">
+                        <input type="text" placeholder="Número de teléfono" name="numTelefono" [(ngModel)]="userData.numTelefono">
+                        <input type="text" placeholder="Correo" name="correo" [(ngModel)]="userData.correo">
+                        <input type="text" placeholder="Contraseña" name="contrasenia" [(ngModel)]="userData.contrasenia">
+                        <button (click)="onRegisterClick()">Registrarme</button>
+    
+                    </form>
+    
+                </div>
+    
+            </div>
+              </ion-content>

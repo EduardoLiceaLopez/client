@@ -1,0 +1,32 @@
+<ion-content>
+  <div class="reservation-form">
+    <h2 class="container_title">Reserva tu habitación</h2>
+    <form (ngSubmit)="reserve()">
+      <div class="form-group">
+        <label for="huespedes">Número de huéspedes:</label>
+        <input type="number" id="huespedes" name="huespedes" placeholder="Ingrese el número de huéspedes" [(ngModel)]="numHuespedes" required>
+      </div>
+      <div class="form-group">
+        <label for="check-in">Fecha de llegada:</label>
+        <input type="date" id="check-in" name="check-in" [(ngModel)]="fechaInicio" required pattern="\d{4}-\d{2}-\d{2}">
+      </div>
+      <div class="form-group">
+        <label for="check-out">Fecha de salida:</label>
+        <input type="date" id="check-out" name="check-out" [(ngModel)]="fechaFinal" required pattern="\d{4}-\d{2}-\d{2}">
+      </div>
+      <div class="form-group">
+        <button type="submit">Reservar</button>
+      </div>
+      <div class="form-group">
+        <button type="submit" (click)="consultar()">Consultar</button>
+      </div>
+      <div class="form-group">
+        <input type="text" id="reservacion-id" name="reservacion-id" placeholder="ID de la reservación" [(ngModel)]="idReservacion" required>
+      </div>
+      <div class="form-group">
+        <button type="submit" (click)="eliminarReservacion()">Eliminar Reservación</button>
+      </div>
+    </form>
+
+  </div>
+</ion-content>

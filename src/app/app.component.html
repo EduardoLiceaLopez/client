@@ -1,0 +1,45 @@
+<ion-header>
+    <div class="toolbar">
+      <div class="toolbar__logo">
+        <a href="#"><img class="logo" alt="logo" src="../assets/villa montero LOGO.png"></a>
+      </div>
+      <nav class="toolbar__nav">
+        <ul>
+          <li><a routerLink="/home">Página principal</a></li>
+          <li><a routerLink="/rooms">Habitaciones</a></li>
+          <li><a routerLink="/reservations">Reservaciones</a></li>
+          <li><a routerLink="/contact">Contacto</a></li>
+          <li><a routerLink="/login">Acceder</a></li>
+        </ul>
+      </nav>
+    </div>
+  </ion-header>
+  
+  <ion-content>
+    <router-outlet></router-outlet>
+  </ion-content>
+  
+  <ion-footer>
+    <div class="footer__section1">
+      <h1 class="footer_text">Hotel Villa Montero</h1>
+      <p class="footer-p">Calidez y tranquilidad</p>
+    </div>
+    <div class="footer__section2">
+      <h1 class="footer_text">Contáctanos</h1>
+      <div>
+        <img src="../assets/ubicacion.png" class="footer3">
+        <p class="footer-p">Carretera acolco el rosal número 58,<br> Estado de México, México</p>
+      </div>
+      <div>
+        <img src="../assets/telefono.png" class="footer3">
+        <p class="footer-p">718 111 2180</p>
+      </div>
+    </div>    
+    <div class="footer__section3">
+      <h1 class="footer_text">Síguenos</h1>
+      <div class="social">
+        <a href="https://www.facebook.com/people/Hotel-Villa-Montero/100057202638867/?locale=es_LA"><img src="../assets/facebook.png"></a>
+        <a href="https://www.instagram.com/p/BnhxOOxlsja/?tagged=entrada&hl=es"><img src="../assets/instagram.png"></a>
+      </div>
+    </div>
+  </ion-footer>
