@@ -199,9 +199,11 @@ export class ReservationsPage implements OnInit {
           });
         } else {
           console.log('Error en la respuesta del servidor:', response);
+          const errorMessage = response.errors[0].message
           Swal.fire({
-            title: 'Reservación eliminada con éxito',
-            icon: 'success',
+            title: 'Reservación no eliminada con éxito',
+            text: errorMessage,
+            icon: 'error',
             confirmButtonText: 'Aceptar',
             width: '100%',
             padding: '2em',
