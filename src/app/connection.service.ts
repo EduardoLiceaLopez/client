@@ -13,7 +13,7 @@ interface GraphqlResponse<T> {
   providedIn: 'root'
 })
 export class ConnectionService {
-  private apiUrl = 'http://3.133.125.100:3000/graphql';
+  private apiUrl = 'https://3.133.125.100:3000/graphql';
   private headers: HttpHeaders;
 
   constructor(private http: HttpClient) {
